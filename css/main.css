@@ -1,0 +1,16 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+}
+aside{
+    width: 3%;height: 100%;float: right;
+}
+#mainCanvas{
+    float: left;
+}
+img{
+    width: 100%;
+}
