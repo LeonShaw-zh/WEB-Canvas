@@ -25,3 +25,12 @@ img:hover{
     transform:scale(1.1);
     background-color: bisque;
 }
+.inputBox{
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    height: 23px;
+    width: 100px;
+    top: 0px;
+    left: 0px;
+}
