@@ -9,6 +9,8 @@ var circle = document.getElementById("circle");
 var rect = document.getElementById("rect");
 var text = document.getElementById("text");
 
+var current = pen;
+
 function drawScreen(){ 
     // 横线与竖线
     var dx = 50; 
@@ -48,8 +50,11 @@ function drawScreen(){
 }
 // drawScreen()
 
-function clearBinding(){
+function clearBinding(e){
     canvas.onclick = null;
     canvas.onmousedown = null;
     canvas.onmouseup = null;
+    current.className = null;
+    current = e;
+    current.className = "select";
 }

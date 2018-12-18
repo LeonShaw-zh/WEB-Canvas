@@ -14,12 +14,15 @@ function drawStart(){
 function drawEnd(){
     canvas.onmousemove = null;
 }
+
+// 默认操作
+clearBinding(pen);
 canvas.onmousedown = drawStart;
 canvas.onmouseup = drawEnd;
 
 // 绑定图标
 pen.onclick = function(){
-    clearBinding();
+    clearBinding(pen);
     canvas.onmousedown = drawStart;
     canvas.onmouseup = drawEnd;
 };

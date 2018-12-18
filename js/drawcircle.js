@@ -17,7 +17,7 @@ function drawCircleEnd(e){
 
 // 绑定图标
 circle.onclick = function(){
-    clearBinding();
+    clearBinding(circle);
     canvas.onmousedown = drawCircleStart;
     canvas.onmouseup = drawCircleEnd;
 }

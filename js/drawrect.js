@@ -25,7 +25,7 @@ function drawRectEnd(e){
 
 // 绑定图标
 rect.onclick = function(){
-    clearBinding();
+    clearBinding(rect);
     canvas.onmousedown = drawRectStart;
     canvas.onmouseup = drawRectEnd;
 };

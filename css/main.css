@@ -6,11 +6,22 @@ body{
     margin: 0;
 }
 aside{
-    width: 3%;height: 100%;float: right;
+    width: 5%;height: 100%;float: right;
+    background-color: beige;
+    align-items:center;
 }
 #mainCanvas{
     float: left;
 }
 img{
-    width: 100%;
+    width: 94%;
+    background-color: beige;
+}
+img:hover{
+    transform:scale(1.1);
+    cursor: pointer;
+}
+.select{
+    transform:scale(1.1);
+    background-color: bisque;
 }

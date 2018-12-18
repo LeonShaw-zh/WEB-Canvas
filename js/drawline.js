@@ -12,7 +12,7 @@ function drawLineEnd(e){
 
 // 绑定图标
 line.onclick = function(){
-    clearBinding();
+    clearBinding(line);
     canvas.onmousedown = drawLineStart;
     canvas.onmouseup = drawLineEnd;
 };
