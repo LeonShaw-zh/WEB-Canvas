@@ -13,11 +13,11 @@ aside{
 #mainCanvas{
     float: left;
 }
-img{
+.icon{
     width: 94%;
     background-color: beige;
 }
-img:hover{
+.icon:hover{
     transform:scale(1.1);
     cursor: pointer;
 }
@@ -33,4 +33,8 @@ img:hover{
     width: 100px;
     top: 0px;
     left: 0px;
+}
+.floatImage{
+    position: fixed;
+    height: auto;
 }

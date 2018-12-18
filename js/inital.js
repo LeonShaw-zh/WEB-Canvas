@@ -4,10 +4,11 @@ function clearBinding(e){
     canvas.onclick = null;
     canvas.onmousedown = null;
     canvas.onmouseup = null;
+    context.setLineDash([]);
     // 清除当前样式
-    current.className = null;
+    current.classList.remove("select");
     current = e;
-    current.className = "select";
+    current.classList.add("select");
     // 隐藏输入框
     textInbox.value = "";
     textInbox.style.display = "none";
