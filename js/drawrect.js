@@ -2,9 +2,11 @@
 function drawRectStart(e){
     prex = e.clientX;
     prey = e.clientY;
+    restorePoint = context.getImageData(0, 0, canvas.width, canvas.height);
+    canvas.onmousemove = drawRectMid;
 }
-
-function drawRectEnd(e){
+function drawRectMid(e){
+    context.putImageData(restorePoint, 0, 0);
     let pointx, pointy, width, height;
     if(e.clientX < prex){
         pointx = e.clientX;
@@ -21,6 +23,9 @@ function drawRectEnd(e){
         height = e.clientY - prey;
     }
     context.strokeRect(pointx, pointy, width, height);
+}
+function drawRectEnd(e){
+    canvas.onmousemove = null;
 }
 
 // 绑定图标
