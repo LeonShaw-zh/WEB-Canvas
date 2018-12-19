@@ -1,5 +1,5 @@
 // 画笔
-var prex, prey, firstin;
+var firstin;
 function drawStart(){
     firstin = true;
     canvas.onmousemove = function(e){

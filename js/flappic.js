@@ -1,11 +1,11 @@
-// 画矩形功能
-function drawRectStart(e){
+// 旋转功能
+function rotateStart(e){
     prex = e.clientX;
     prey = e.clientY;
     restorePoint = context.getImageData(0, 0, canvas.width, canvas.height);
-    canvas.onmousemove = drawRectMid;
+    canvas.onmousemove = rotateMid;
 }
-function drawRectMid(e){
+function rotateMid(e){
     context.putImageData(restorePoint, 0, 0);
     if(e.clientX < prex){
         pointx = e.clientX;
@@ -21,15 +21,18 @@ function drawRectMid(e){
         pointy = prey;
         height = e.clientY - prey;
     }
+    context.setLineDash([5,15]);
     context.strokeRect(pointx, pointy, width, height);
 }
-function drawRectEnd(e){
+function rotateEnd(e){
     canvas.onmousemove = null;
+    alert(111);
 }
 
 // 绑定图标
-rect.onclick = function(){
-    clearBinding(rect);
-    canvas.onmousedown = drawRectStart;
-    canvas.onmouseup = drawRectEnd;
+rot.onclick = function(){
+    clearBinding(rot);
+    canvas.onmousedown = rotateStart;
+    canvas.onmouseup = rotateEnd;
 };
+

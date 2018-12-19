@@ -1,16 +1,14 @@
 // 插入图片功能
 // 图片输入框
-let imageFile = document.createElement("input");
+var imageFile = document.createElement("input");
 imageFile.type = "file";
 imageFile.accept = "image/*";
 imageFile.className  = "inputBox";
 imageFile.onchange = recvImage;
 body.appendChild(imageFile);
 // 临时图片对象
-let img = document.createElement("img");
+var img = document.createElement("img");
 img.className = "floatImage";
-// 所需全局变量
-let pointx, pointy, width, height;
 
 function drawImageStart(e){
     prex = e.clientX;
