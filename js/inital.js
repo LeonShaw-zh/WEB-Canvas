@@ -4,6 +4,7 @@ function clearBinding(e){
     canvas.onclick = null;
     canvas.onmousedown = null;
     canvas.onmouseup = null;
+    // 清除虚线
     context.setLineDash([]);
     // 清除当前样式
     current.classList.remove("select");
